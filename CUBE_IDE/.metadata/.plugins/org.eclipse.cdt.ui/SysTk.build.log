@@ -1,0 +1,21 @@
+16:08:38 **** Build of configuration Debug for project SysTk ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/Systick.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/Systick.d" -MT"Src/Systick.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/Systick.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "SysTk.elf" @"objects.list"   -mcpu=cortex-m3 -T"F:\New folder\CUBE_IDE\SysTk\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SysTk.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SysTk.elf
+ 
+arm-none-eabi-size   SysTk.elf 
+arm-none-eabi-objdump -h -S  SysTk.elf  > "SysTk.list"
+arm-none-eabi-objcopy  -O ihex  SysTk.elf  "SysTk.hex"
+   text	   data	    bss	    dec	    hex	filename
+   1612	      8	   1568	   3188	    c74	SysTk.elf
+Finished building: default.size.stdout
+ 
+Finished building: SysTk.hex
+ 
+Finished building: SysTk.list
+ 
+
+16:08:38 Build Finished. 0 errors, 0 warnings. (took 715ms)
+

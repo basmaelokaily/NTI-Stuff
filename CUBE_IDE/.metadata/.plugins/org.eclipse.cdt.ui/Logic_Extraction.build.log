@@ -1,0 +1,10 @@
+16:08:36 **** Incremental Build of configuration Debug for project Logic_Extraction ****
+make -j8 all 
+arm-none-eabi-size   Logic_Extraction.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4888	    100	   1924	   6912	   1b00	Logic_Extraction.elf
+Finished building: default.size.stdout
+ 
+
+16:08:37 Build Finished. 0 errors, 0 warnings. (took 313ms)
+

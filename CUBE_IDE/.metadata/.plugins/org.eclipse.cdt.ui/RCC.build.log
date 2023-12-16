@@ -1,0 +1,20 @@
+12:20:44 **** Incremental Build of configuration Debug for project RCC ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 -mcpu=cortex-m3 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f103c8tx.d" -MT"Startup/startup_stm32f103c8tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f103c8tx.o" "../Startup/startup_stm32f103c8tx.s"
+arm-none-eabi-gcc -gdwarf-2 -o "RCC.elf" @"objects.list"   -mcpu=cortex-m3 -T"F:\New folder\CUBE_IDE\RCC\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RCC.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RCC.elf
+ 
+arm-none-eabi-size   RCC.elf 
+arm-none-eabi-objdump -h -S  RCC.elf  > "RCC.list"
+arm-none-eabi-objcopy  -O ihex  RCC.elf  "RCC.hex"
+   text	   data	    bss	    dec	    hex	filename
+    940	      8	   1568	   2516	    9d4	RCC.elf
+Finished building: default.size.stdout
+ 
+Finished building: RCC.list
+ 
+Finished building: RCC.hex
+ 
+
+12:20:45 Build Finished. 0 errors, 0 warnings. (took 930ms)
+

@@ -1,0 +1,102 @@
+16:08:37 **** Build of configuration Debug for project Project_clock ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m3 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f103c8tx.d" -MT"Startup/startup_stm32f103c8tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f103c8tx.o" "../Startup/startup_stm32f103c8tx.s"
+arm-none-eabi-gcc "../Src/DIO_prog.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/DIO_prog.d" -MT"Src/DIO_prog.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/DIO_prog.o"
+arm-none-eabi-gcc "../Src/KEYPAD.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/KEYPAD.d" -MT"Src/KEYPAD.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/KEYPAD.o"
+arm-none-eabi-gcc "../Src/LCD.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/LCD.d" -MT"Src/LCD.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/LCD.o"
+arm-none-eabi-gcc "../Src/RCC.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/RCC.d" -MT"Src/RCC.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/RCC.o"
+arm-none-eabi-gcc "../Src/Systick.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/Systick.d" -MT"Src/Systick.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/Systick.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+In file included from ../Src/KEYPAD.c:7:
+../Src/KEYPAD.h:26:1: error: unknown type name 'uint8_t'
+   26 | uint8_t KEYPAD_read(void);
+      | ^~~~~~~
+../Src/KEYPAD.h:12:1: note: 'uint8_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+   11 | #include "std_macros.h"
+  +++ |+#include <stdint.h>
+   12 | 
+../Src/KEYPAD.c:8:7: error: unknown type name 'uint8_t'
+    8 | const uint8_t keypad_matrix[] =
+      |       ^~~~~~~
+In file included from ../Src/KEYPAD.c:7:
+../Src/KEYPAD.c: In function 'KEYPAD_init':
+../Src/KEYPAD.h:14:57: error: 'DDRD' undeclared (first use in this function)
+   14 |                                                         DDRD = 0b11110000; \
+      |                                                         ^~~~
+../Src/KEYPAD.c:16:9: note: in expansion of macro 'INIT_KEYPAD_PIN'
+   16 |         INIT_KEYPAD_PIN;
+      |         ^~~~~~~~~~~~~~~
+../Src/KEYPAD.h:14:57: note: each undeclared identifier is reported only once for each function it appears in
+   14 |                                                         DDRD = 0b11110000; \
+      |                                                         ^~~~
+../Src/KEYPAD.c:16:9: note: in expansion of macro 'INIT_KEYPAD_PIN'
+   16 |         INIT_KEYPAD_PIN;
+      |         ^~~~~~~~~~~~~~~
+../Src/KEYPAD.h:15:57: error: 'PORTD' undeclared (first use in this function)
+   15 |                                                         PORTD = 0b1111;
+      |                                                         ^~~~~
+../Src/KEYPAD.c:16:9: note: in expansion of macro 'INIT_KEYPAD_PIN'
+   16 |         INIT_KEYPAD_PIN;
+      |         ^~~~~~~~~~~~~~~
+../Src/KEYPAD.c: At top level:
+../Src/KEYPAD.c:19:1: error: unknown type name 'uint8_t'
+   19 | uint8_t KEYPAD_read(void){
+      | ^~~~~~~
+../Src/KEYPAD.c:8:1: note: 'uint8_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+    7 | #include "KEYPAD.h"
+  +++ |+#include <stdint.h>
+    8 | const uint8_t keypad_matrix[] =
+In file included from ../Src/KEYPAD.c:7:
+../Src/KEYPAD.c: In function 'KEYPAD_read':
+../Src/KEYPAD.h:20:26: warning: implicit declaration of function 'SETBIT'; did you mean 'SET_BIT'? [-Wimplicit-function-declaration]
+   20 | #define K4(x) if(x == 1) SETBIT(PORTD,4); else CLRBIT(PORTD,4);
+      |                          ^~~~~~
+../Src/KEYPAD.c:20:9: note: in expansion of macro 'K4'
+   20 |         K4(0); K5(1); K6(1); K7(1);
+      |         ^~
+../Src/KEYPAD.h:20:33: error: 'PORTD' undeclared (first use in this function)
+   20 | #define K4(x) if(x == 1) SETBIT(PORTD,4); else CLRBIT(PORTD,4);
+      |                                 ^~~~~
+../Src/KEYPAD.c:20:9: note: in expansion of macro 'K4'
+   20 |         K4(0); K5(1); K6(1); K7(1);
+      |         ^~
+../Src/KEYPAD.h:20:48: warning: implicit declaration of function 'CLRBIT'; did you mean 'CLEAR_BIT'? [-Wimplicit-function-declaration]
+   20 | #define K4(x) if(x == 1) SETBIT(PORTD,4); else CLRBIT(PORTD,4);
+      |                                                ^~~~~~
+../Src/KEYPAD.c:20:9: note: in expansion of macro 'K4'
+   20 |         K4(0); K5(1); K6(1); K7(1);
+      |         ^~
+../Src/KEYPAD.h:16:12: warning: implicit declaration of function 'READBIT' [-Wimplicit-function-declaration]
+   16 | #define K0 READBIT(PIND,0)
+      |            ^~~~~~~
+../Src/KEYPAD.c:21:12: note: in expansion of macro 'K0'
+   21 |         if(K0 == 0) return keypad_matrix[0];
+      |            ^~
+../Src/KEYPAD.h:16:20: error: 'PIND' undeclared (first use in this function)
+   16 | #define K0 READBIT(PIND,0)
+      |                    ^~~~
+../Src/KEYPAD.c:21:12: note: in expansion of macro 'K0'
+   21 |         if(K0 == 0) return keypad_matrix[0];
+      |            ^~
+../Src/KEYPAD.c:25:9: warning: implicit declaration of function '_delay_ms' [-Wimplicit-function-declaration]
+   25 |         _delay_ms(1);
+      |         ^~~~~~~~~
+../Src/LCD.c: In function 'LCD_init':
+../Src/LCD.c:40:9: warning: implicit declaration of function 'SYSTICK_SetTime_ms' [-Wimplicit-function-declaration]
+   40 |         SYSTICK_SetTime_ms(500, 8000000);
+      |         ^~~~~~~~~~~~~~~~~~
+../Src/LCD.c:41:9: warning: implicit declaration of function 'SYSTICK_Start' [-Wimplicit-function-declaration]
+   41 |         SYSTICK_Start ();
+      |         ^~~~~~~~~~~~~
+../Src/LCD.c: In function 'LCD_write_data':
+../Src/LCD.c:101:12: warning: unused variable 'i' [-Wunused-variable]
+  101 |         u8 i = 0 ;
+      |            ^
+make: *** [Src/subdir.mk:40: Src/KEYPAD.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+
+16:08:37 Build Failed. 9 errors, 7 warnings. (took 528ms)
+

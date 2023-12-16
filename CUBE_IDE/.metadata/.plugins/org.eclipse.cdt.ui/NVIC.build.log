@@ -1,0 +1,20 @@
+15:55:01 **** Incremental Build of configuration Debug for project NVIC ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/LCD.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/LCD.d" -MT"Src/LCD.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/LCD.o"
+arm-none-eabi-gcc -o "NVIC.elf" @"objects.list"   -mcpu=cortex-m3 -T"F:\New folder\CUBE_IDE\NVIC\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="NVIC.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: NVIC.elf
+ 
+arm-none-eabi-size   NVIC.elf 
+arm-none-eabi-objdump -h -S  NVIC.elf  > "NVIC.list"
+arm-none-eabi-objcopy  -O ihex  NVIC.elf  "NVIC.hex"
+   text	   data	    bss	    dec	    hex	filename
+   3324	     12	   1564	   4900	   1324	NVIC.elf
+Finished building: default.size.stdout
+ 
+Finished building: NVIC.hex
+Finished building: NVIC.list
+ 
+ 
+
+15:55:02 Build Finished. 0 errors, 0 warnings. (took 454ms)
+

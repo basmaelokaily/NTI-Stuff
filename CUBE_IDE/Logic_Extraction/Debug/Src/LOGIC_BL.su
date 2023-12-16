@@ -1,0 +1,8 @@
+../Src/LOGIC_BL.c:8:6:Parser	24	static
+../Src/LOGIC_BL.c:23:4:Write_line_of_Data	24	static
+../Src/LOGIC_BL.c:42:4:Check_Sum	16	static
+../Src/LOGIC_BL.c:78:4:Make_Byte	16	static
+../Src/LOGIC_BL.c:83:4:GET_RECORD_TYPE	16	static
+../Src/LOGIC_BL.c:88:5:GET_Address	16	static
+../Src/LOGIC_BL.c:93:4:GET_Data_Bit_Size	16	static
+../Src/LOGIC_BL.c:98:4:GET_Checksum	16	static

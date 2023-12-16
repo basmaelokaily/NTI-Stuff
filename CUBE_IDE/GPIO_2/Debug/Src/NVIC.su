@@ -1,0 +1,16 @@
+../Src/NVIC.c:11:4:DNVIC_EnableIRQ	24	static
+../Src/NVIC.c:34:4:DNVIC_DisableIRQ	24	static
+../Src/NVIC.c:54:4:DNVIC_SetPendingIRQ	24	static
+../Src/NVIC.c:74:4:DNVIC_ClearPendingIRQ	24	static
+../Src/NVIC.c:94:4:DNVIC_GetPendingIRQ	24	static
+../Src/NVIC.c:115:4:DNVIC_GetActive	24	static
+../Src/NVIC.c:137:4:DNVIC_SetPriorityGrouping	16	static
+../Src/NVIC.c:144:4:DNVIC_SetPriority	16	static
+../Src/NVIC.c:150:4:DNVIC_GetPriority	16	static
+../Src/NVIC.c:156:6:DNVIC_voidDisableAllPeripherals	4	static
+../Src/NVIC.c:163:6:DNVIC_voidEnableAllPeripherals	4	static
+../Src/NVIC.c:170:6:DNVIC_voidDisableAllFaults	4	static
+../Src/NVIC.c:176:6:DNVIC_voidEnableAllFaults	4	static
+../Src/NVIC.c:181:6:DNVIC_voidSetBASEPRI	16	static
+../Src/NVIC.c:185:6:DNVIC_voidChangeVectorOffset	16	static
+../Src/NVIC.c:190:6:DNVIC_voidSysReset	4	static

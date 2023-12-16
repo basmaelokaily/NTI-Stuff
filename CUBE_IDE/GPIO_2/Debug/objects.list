@@ -1,0 +1,8 @@
+"./Src/DIO_prog.o"
+"./Src/LCD.o"
+"./Src/NVIC.o"
+"./Src/RCC.o"
+"./Src/main.o"
+"./Src/syscalls.o"
+"./Src/sysmem.o"
+"./Startup/startup_stm32f103c8tx.o"

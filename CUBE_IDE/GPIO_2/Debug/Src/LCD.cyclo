@@ -1,0 +1,5 @@
+../Src/LCD.c:22:6:LCD_init	5
+../Src/LCD.c:66:6:LCD_write_command	13
+../Src/LCD.c:112:6:LCD_write_data	13
+../Src/LCD.c:156:6:LCD_write_string	2
+../Src/LCD.c:178:6:LCD_write_num	4
