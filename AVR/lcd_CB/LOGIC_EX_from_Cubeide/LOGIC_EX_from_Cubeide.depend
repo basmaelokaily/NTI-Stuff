@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1702302144 source:f:\new folder\c\lcd_cb\logic_ex_from_cubeide\main.c
+	<stdio.h>
+	<stdlib.h>
+	"LOGIC_BL.h"
+
+1702306930 f:\new folder\c\lcd_cb\logic_ex_from_cubeide\logic_bl.h
+	"std_types.h"
+
+1702201864 f:\new folder\c\lcd_cb\logic_ex_from_cubeide\std_types.h
+
+1702306930 source:f:\new folder\c\lcd_cb\logic_ex_from_cubeide\logic_bl.c
+	"LOGIC_BL.h"
+
